@@ -1,0 +1,501 @@
+{
+    "type": "MySQLNotebook",
+    "version": "1.0",
+    "caption": "DB Notebook",
+    "content": "\\about\nshow databases;\n\nuse bank_db;\n\nshow tables;\n\nselect * from employees;\n\nselect dept from employees group by (dept);\n\nselect emp_id, fname, salary from employees where salary = (select max(salary) from employees);\n\nselect sum(salary) from employees;\n\nselect AVG(salary) from employees;",
+    "options": {
+        "tabSize": 4,
+        "insertSpaces": true,
+        "indentSize": 4,
+        "defaultEOL": "CRLF",
+        "trimAutoWhitespace": true
+    },
+    "viewState": {
+        "cursorState": [
+            {
+                "inSelectionMode": false,
+                "selectionStart": {
+                    "lineNumber": 16,
+                    "column": 34
+                },
+                "position": {
+                    "lineNumber": 16,
+                    "column": 34
+                }
+            }
+        ],
+        "viewState": {
+            "scrollLeft": 0,
+            "firstPosition": {
+                "lineNumber": 1,
+                "column": 1
+            },
+            "firstPositionDeltaTop": 0
+        },
+        "contributionsState": {
+            "editor.contrib.folding": {},
+            "editor.contrib.wordHighlighter": false
+        }
+    },
+    "contexts": [
+        {
+            "state": {
+                "start": 1,
+                "end": 1,
+                "language": "mysql",
+                "result": {
+                    "type": "text",
+                    "text": [
+                        {
+                            "type": 2,
+                            "content": "Welcome to the MySQL Shell - DB Notebook.\n\nPress Ctrl+Enter to execute the code block.\n\nExecute \\sql to switch to SQL, \\js to JavaScript and \\ts to TypeScript mode.\nExecute \\help or \\? for help;",
+                            "language": "ansi"
+                        }
+                    ]
+                },
+                "currentHeight": 118.390625,
+                "statements": [
+                    {
+                        "delimiter": ";",
+                        "span": {
+                            "start": 0,
+                            "length": 6
+                        },
+                        "contentStart": 0,
+                        "state": 0
+                    }
+                ]
+            },
+            "data": []
+        },
+        {
+            "state": {
+                "start": 2,
+                "end": 16,
+                "language": "mysql",
+                "result": {
+                    "type": "resultIds",
+                    "list": [
+                        "c228dc49-7245-4b38-d405-ae32e293780c",
+                        "e2be81ba-5928-4f22-c550-969cdceae79b",
+                        "1620112a-446c-4c54-b816-207332ca922d",
+                        "04679d11-1fc9-4f89-ef75-5dbe5821f981",
+                        "5b91244d-55a1-46ec-9a12-247dcfc5df58",
+                        "30aa2144-b102-40d8-8395-2daf55f45226",
+                        "7280e604-ea5a-4628-d18f-d2783970e32f",
+                        "568bf45f-dbc3-4be9-c5e0-c3eab1e5353f"
+                    ]
+                },
+                "currentHeight": 230.796875,
+                "currentSet": 7,
+                "statements": [
+                    {
+                        "delimiter": ";",
+                        "span": {
+                            "start": 0,
+                            "length": 15
+                        },
+                        "contentStart": 0,
+                        "state": 0
+                    },
+                    {
+                        "delimiter": ";",
+                        "span": {
+                            "start": 15,
+                            "length": 14
+                        },
+                        "contentStart": 17,
+                        "state": 0
+                    },
+                    {
+                        "delimiter": ";",
+                        "span": {
+                            "start": 29,
+                            "length": 14
+                        },
+                        "contentStart": 31,
+                        "state": 0
+                    },
+                    {
+                        "delimiter": ";",
+                        "span": {
+                            "start": 43,
+                            "length": 26
+                        },
+                        "contentStart": 45,
+                        "state": 0
+                    },
+                    {
+                        "delimiter": ";",
+                        "span": {
+                            "start": 69,
+                            "length": 45
+                        },
+                        "contentStart": 71,
+                        "state": 0
+                    },
+                    {
+                        "delimiter": ";",
+                        "span": {
+                            "start": 114,
+                            "length": 97
+                        },
+                        "contentStart": 116,
+                        "state": 0
+                    },
+                    {
+                        "delimiter": ";",
+                        "span": {
+                            "start": 211,
+                            "length": 36
+                        },
+                        "contentStart": 213,
+                        "state": 0
+                    },
+                    {
+                        "delimiter": ";",
+                        "span": {
+                            "start": 247,
+                            "length": 36
+                        },
+                        "contentStart": 249,
+                        "state": 0
+                    }
+                ]
+            },
+            "data": [
+                {
+                    "tabId": "6a59ad43-ca02-407c-ca84-302beb088e77",
+                    "resultId": "c228dc49-7245-4b38-d405-ae32e293780c",
+                    "rows": [
+                        {
+                            "0": "bank_db"
+                        },
+                        {
+                            "0": "information_schema"
+                        },
+                        {
+                            "0": "learning"
+                        },
+                        {
+                            "0": "mysql"
+                        },
+                        {
+                            "0": "performance_schema"
+                        },
+                        {
+                            "0": "sakila"
+                        },
+                        {
+                            "0": "school_db"
+                        },
+                        {
+                            "0": "store"
+                        },
+                        {
+                            "0": "sys"
+                        },
+                        {
+                            "0": "world"
+                        }
+                    ],
+                    "columns": [
+                        {
+                            "title": "Database",
+                            "field": "0",
+                            "dataType": {
+                                "type": 17
+                            }
+                        }
+                    ],
+                    "executionInfo": {
+                        "text": "OK, 10 records retrieved in 1.183ms"
+                    },
+                    "totalRowCount": 10,
+                    "hasMoreRows": false,
+                    "currentPage": 0,
+                    "index": 0,
+                    "sql": "show databases"
+                },
+                {
+                    "tabId": "6a59ad43-ca02-407c-ca84-302beb088e77",
+                    "resultId": "e2be81ba-5928-4f22-c550-969cdceae79b",
+                    "rows": [
+                        {
+                            "0": "employees"
+                        }
+                    ],
+                    "columns": [
+                        {
+                            "title": "Tables_in_bank_db",
+                            "field": "0",
+                            "dataType": {
+                                "type": 17
+                            }
+                        }
+                    ],
+                    "executionInfo": {
+                        "text": "OK, 1 record retrieved in 4.014ms"
+                    },
+                    "totalRowCount": 1,
+                    "hasMoreRows": false,
+                    "currentPage": 0,
+                    "index": 2,
+                    "sql": "\n\nshow tables"
+                },
+                {
+                    "tabId": "6a59ad43-ca02-407c-ca84-302beb088e77",
+                    "resultId": "1620112a-446c-4c54-b816-207332ca922d",
+                    "rows": [
+                        {
+                            "0": 101,
+                            "1": "Raju",
+                            "2": "Sharma",
+                            "3": "Manager",
+                            "4": "Loan",
+                            "5": 25000
+                        },
+                        {
+                            "0": 102,
+                            "1": "Sham",
+                            "2": "Saha",
+                            "3": "Cashier",
+                            "4": "Cash",
+                            "5": 35000
+                        },
+                        {
+                            "0": 103,
+                            "1": "Paul",
+                            "2": "Victor",
+                            "3": "Associate",
+                            "4": "IT",
+                            "5": 45000
+                        },
+                        {
+                            "0": 105,
+                            "1": "Alex",
+                            "2": "Sharma",
+                            "3": "Accountant",
+                            "4": "Account",
+                            "5": 25000
+                        },
+                        {
+                            "0": 106,
+                            "1": "Victor",
+                            "2": "Singh",
+                            "3": "Associate",
+                            "4": "Deposit",
+                            "5": 25000
+                        },
+                        {
+                            "0": 107,
+                            "1": "Ali",
+                            "2": "Singh",
+                            "3": "Accountant",
+                            "4": "Account",
+                            "5": 25000
+                        }
+                    ],
+                    "columns": [
+                        {
+                            "title": "emp_id",
+                            "field": "0",
+                            "dataType": {
+                                "type": 4
+                            }
+                        },
+                        {
+                            "title": "fname",
+                            "field": "1",
+                            "dataType": {
+                                "type": 17
+                            }
+                        },
+                        {
+                            "title": "lname",
+                            "field": "2",
+                            "dataType": {
+                                "type": 17
+                            }
+                        },
+                        {
+                            "title": "desig",
+                            "field": "3",
+                            "dataType": {
+                                "type": 17
+                            }
+                        },
+                        {
+                            "title": "dept",
+                            "field": "4",
+                            "dataType": {
+                                "type": 17
+                            }
+                        },
+                        {
+                            "title": "salary",
+                            "field": "5",
+                            "dataType": {
+                                "type": 4
+                            }
+                        }
+                    ],
+                    "executionInfo": {
+                        "text": "OK, 6 records retrieved in 0.995ms"
+                    },
+                    "totalRowCount": 6,
+                    "hasMoreRows": false,
+                    "currentPage": 0,
+                    "index": 3,
+                    "sql": "\n\nselect * from employees"
+                },
+                {
+                    "tabId": "6a59ad43-ca02-407c-ca84-302beb088e77",
+                    "resultId": "04679d11-1fc9-4f89-ef75-5dbe5821f981",
+                    "rows": [
+                        {
+                            "0": "Loan"
+                        },
+                        {
+                            "0": "Cash"
+                        },
+                        {
+                            "0": "IT"
+                        },
+                        {
+                            "0": "Account"
+                        },
+                        {
+                            "0": "Deposit"
+                        }
+                    ],
+                    "columns": [
+                        {
+                            "title": "dept",
+                            "field": "0",
+                            "dataType": {
+                                "type": 17
+                            }
+                        }
+                    ],
+                    "executionInfo": {
+                        "text": "OK, 5 records retrieved in 1.004ms"
+                    },
+                    "totalRowCount": 5,
+                    "hasMoreRows": false,
+                    "currentPage": 0,
+                    "index": 4,
+                    "sql": "\n\nselect dept from employees group by (dept)"
+                },
+                {
+                    "tabId": "6a59ad43-ca02-407c-ca84-302beb088e77",
+                    "resultId": "5b91244d-55a1-46ec-9a12-247dcfc5df58",
+                    "rows": [
+                        {
+                            "0": 103,
+                            "1": "Paul",
+                            "2": 45000
+                        }
+                    ],
+                    "columns": [
+                        {
+                            "title": "emp_id",
+                            "field": "0",
+                            "dataType": {
+                                "type": 4
+                            }
+                        },
+                        {
+                            "title": "fname",
+                            "field": "1",
+                            "dataType": {
+                                "type": 17
+                            }
+                        },
+                        {
+                            "title": "salary",
+                            "field": "2",
+                            "dataType": {
+                                "type": 4
+                            }
+                        }
+                    ],
+                    "executionInfo": {
+                        "text": "OK, 1 record retrieved in 1.011ms"
+                    },
+                    "totalRowCount": 1,
+                    "hasMoreRows": false,
+                    "currentPage": 0,
+                    "index": 5,
+                    "sql": "\n\nselect emp_id, fname, salary from employees where salary = (select max(salary) from employees)"
+                },
+                {
+                    "tabId": "6a59ad43-ca02-407c-ca84-302beb088e77",
+                    "resultId": "30aa2144-b102-40d8-8395-2daf55f45226",
+                    "rows": [
+                        {
+                            "0": "180000"
+                        }
+                    ],
+                    "columns": [
+                        {
+                            "title": "sum(salary)",
+                            "field": "0",
+                            "dataType": {
+                                "type": 10
+                            }
+                        }
+                    ],
+                    "executionInfo": {
+                        "text": "OK, 1 record retrieved in 1.005ms"
+                    },
+                    "totalRowCount": 1,
+                    "hasMoreRows": false,
+                    "currentPage": 0,
+                    "index": 6,
+                    "sql": "\n\nselect sum(salary) from employees"
+                },
+                {
+                    "tabId": "6a59ad43-ca02-407c-ca84-302beb088e77",
+                    "resultId": "7280e604-ea5a-4628-d18f-d2783970e32f",
+                    "rows": [
+                        {
+                            "0": "30000.0000"
+                        }
+                    ],
+                    "columns": [
+                        {
+                            "title": "AVG(salary)",
+                            "field": "0",
+                            "dataType": {
+                                "type": 10
+                            }
+                        }
+                    ],
+                    "executionInfo": {
+                        "text": "OK, 1 record retrieved in 2.413ms"
+                    },
+                    "totalRowCount": 1,
+                    "hasMoreRows": false,
+                    "currentPage": 0,
+                    "index": 7,
+                    "sql": "\n\nselect AVG(salary) from employees"
+                },
+                {
+                    "tabId": "6a59ad43-ca02-407c-ca84-302beb088e77",
+                    "resultId": "568bf45f-dbc3-4be9-c5e0-c3eab1e5353f",
+                    "rows": [],
+                    "executionInfo": {
+                        "text": "OK, 0 records retrieved in 1.001ms",
+                        "type": 4
+                    },
+                    "totalRowCount": 0,
+                    "hasMoreRows": false,
+                    "currentPage": 0,
+                    "index": 1,
+                    "sql": "\n\nuse bank_db"
+                }
+            ]
+        }
+    ]
+}
